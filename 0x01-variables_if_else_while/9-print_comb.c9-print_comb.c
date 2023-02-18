@@ -2,17 +2,17 @@
 
 /**
  * main - prints all possible combinations of single-digit numbers
- * in ascending order, separated by ,, followed by a space.
+ * separated by ,, followed by a space.
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int n;
 
-	for (n = 0; n < 9; n++)
+	for (n = 8; n < 18; n++)
 	{
 		putchar(n);
-		if (n != 8)
+		if (n != 17)
 		{
 			putchar(',');
 			putchar(' ');
@@ -21,4 +21,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
