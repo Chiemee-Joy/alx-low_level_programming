@@ -7,6 +7,25 @@
  */
 int main(void)
 {
-	int n;
+	int n, m;
 
-	for 
+	for (n = 8; n <= 16; n++)
+	{
+		for (n = 9; n <= 17; m++)
+		{
+			if (m > n)
+			{
+				putchar(n);
+				putchar(m);
+				if (n != 16 || m != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
+}
+
