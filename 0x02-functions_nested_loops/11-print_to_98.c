@@ -13,9 +13,9 @@ void print_to_98(int n)
 	for (c = n; c <= 98; c++)
 	{
 		if (c != 98)
-			_putchar("%d, ", c);
+			printf("%d, ", c);
 		else if (c == 98)
-			_putchar("%d\n", c);
+			printf("%d\n", c);
 	}
 	}
 	else if (n >= 98)
@@ -23,9 +23,9 @@ void print_to_98(int n)
 	for (d = n; d >= 98; d--)
 	{
 		if (d != 98)
-			_putchar("%d, ", d);
+			printf("%d, ", d);
 		else if (d == 98)
-			_putchar("%d\n", d);
+			printf("%d\n", d);
 	}
 	}
 }
