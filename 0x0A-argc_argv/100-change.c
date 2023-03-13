@@ -8,7 +8,7 @@
  * @argc: argument count
  * @argv: arguments
  *
- * Rrturn: 0 (Success), 1 (Erroe)
+ * Return: 0 (Success), 1 (Erroe)
  */
 int main(int argc, char **argv)
 {
