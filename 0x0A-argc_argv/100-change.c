@@ -8,14 +8,12 @@
  * @argc: argument count
  * @argv: arguments
  *
- * Rrturn: 0
+ * Rrturn: 0 (Success), 1 (Erroe)
  */
 int main(int argc, char **argv)
 {
-	int total, count;
-	unsigned int j;
-	char *p;
-	int cents[] = {25, 10, 5, 2};
+	int num, j, result;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -23,31 +21,24 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	total = strtol(argv[1], &p, 10);
-	count = 0;
+	num = atoi(argv[1]);
+	result = 0;
 
-	if (!*p)
+	if (num < 0)
 	{
-		while (total < 1)
+		printf("0\n");
+		return (0);
+	}
+
+	for (j = 0; j < 5 && num >= 0; j++)
+	{
+		while (num >= coins[j])
 		{
-			for (j = 0; j < sizeof(cents[j]); j++)
-			{
-				if (total >= cents[j])
-				{
-					count += total / cents[j];
-					total = total % cents[j];
-				}
-			}
+			result++;
+			num -= coins[j];
 		}
-		if (total == 1)
-			count++;
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
 	}
 
-	printf("%d\n", count);
+	printf("%d\n", result);
 	return (0);
 }
